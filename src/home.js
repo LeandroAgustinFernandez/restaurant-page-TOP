@@ -36,5 +36,5 @@ export default function home() {
   article.appendChild(divimg);
   section.appendChild(h1);
   section.appendChild(article);
-  return section;
+  return section;   
 }

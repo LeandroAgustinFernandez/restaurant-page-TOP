@@ -81,6 +81,21 @@ section {
   text-align: center;
   margin: 1em;
 }
+.article-menu{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 2em 6em;
+    gap:1em
+}
+.article-menu > div{
+    display: flex;
+    flex-direction: column;
+}
+.article-menu p{
+    flex:1;
+    width: 60%;
+    margin: 1em 0;
+}
 footer {
   display: flex;
   align-items: center;
