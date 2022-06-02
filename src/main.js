@@ -24,9 +24,9 @@ function header() {
   let ahome = document.createElement("a");
   let amenu = document.createElement("a");
   let acontact = document.createElement("a");
-  ahome.textContent = "home";
-  amenu.textContent = "menu";
-  acontact.textContent = "contact";
+  ahome.textContent = "HOME";
+  amenu.textContent = "MENU";
+  acontact.textContent = "CONTTATI";
   ahome.addEventListener("click", setContent);
   amenu.addEventListener("click", setContent);
   acontact.addEventListener("click", setContent);
@@ -61,6 +61,7 @@ function footer() {
 
 function setContent(e) {
   let page = e.target.textContent;
+  page = page.toLowerCase();
   switch (page) {
     case "home":
       mainContent = home();
@@ -68,7 +69,7 @@ function setContent(e) {
     case "menu":
       mainContent = menu();
       break;
-    case "contact":
+    case "conttati":
       mainContent = contact();
       break;
   }
@@ -77,7 +78,10 @@ function setContent(e) {
 
 export default function init() {
   const content = document.querySelector("#content");
-  content.setAttribute('style','background-image: url("./images/b0ec99e28a52f762e99b57e2553d90e7.jpg")')
+  content.setAttribute(
+    "style",
+    'background-image: url("./images/b0ec99e28a52f762e99b57e2553d90e7.jpg");background-size:cover;background-repeat:no-repeat'
+  );
   content.innerHTML = "";
   content.appendChild(header());
   content.appendChild(main(mainContent));

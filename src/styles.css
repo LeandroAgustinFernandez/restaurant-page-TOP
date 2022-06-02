@@ -1,40 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;1,200&display=swap');
-*{
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;1,200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    font-family: 'Raleway', sans-serif;
-    color:white;
-    /* background-image: url('./bg.jpg'); */
+body {
+  font-family: "Raleway", sans-serif;
+  color: rgb(248, 248, 248);
 }
-#content{
-    min-height: 100vh;
-    object-fit: cover;
+#content {
+  min-height: 100vh;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
 }
-header,footer{
-    background-color: rgb(62,45,38,0.5);
-    padding: 1.2em 0;
-    font-size:1.3rem;
+header,
+footer {
+  background-color: rgb(62, 45, 38, 0.5);
+  padding: 1.2em 0;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
-nav > ul{
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    
+nav > ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
-footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
+main {
+  display: flex;
+  padding: 2em 4em;
+  align-items: center;
+  flex: 1;
+}
+section {
+  background-color: rgb(62, 45, 38, 0.5);
+  min-height: 500px;
+  flex: 1;
+  border-radius: 3px;
+}
+.article-home {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 2em 6em;
+}
+.divtext {
+  flex: 1;
+  align-items: center;
+}
+.divtext > h2 {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.divtext > p {
+  font-size: 1.2rem;
+  margin: 1em 0;
+  text-shadow: 1px 1px rgb(51, 35, 29);;
+}
+@media (max-width: 1024px) {
+  .article-home {
+    flex-direction: column;
+    padding: 2em 3em;
+  }
+  .divtext > p {
+    font-size: 1rem;
+  }
+}
+.divimg {
+  flex: 1;
+  margin: auto;
+}
+.img-home {
+  width: 100%;
+  object-fit: contain;
+  opacity: 0.8;
+  border-radius: 2px;
+}
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1em;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
 }
 .github {
-    text-decoration: none;
-    color: white;
-    font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
 }
