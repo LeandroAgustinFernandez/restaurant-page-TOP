@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;1,200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    color:white;
+    /* background-image: url('./bg.jpg'); */
+}
+#content{
+    min-height: 100vh;
+    object-fit: cover;
+}
+header,footer{
+    background-color: rgb(62,45,38,0.5);
+    padding: 1.2em 0;
+    font-size:1.3rem;
+}
+nav > ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.github {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}

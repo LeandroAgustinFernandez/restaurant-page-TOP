@@ -77,6 +77,7 @@ function setContent(e) {
 
 export default function init() {
   const content = document.querySelector("#content");
+  content.setAttribute('style','background-image: url("./images/b0ec99e28a52f762e99b57e2553d90e7.jpg")')
   content.innerHTML = "";
   content.appendChild(header());
   content.appendChild(main(mainContent));

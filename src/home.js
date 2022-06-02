@@ -3,3 +3,5 @@ export default function home() {
     h1.textContent = 'HOME'
     return h1;
 }
+
+
