@@ -77,8 +77,8 @@ export default function menu() {
     p.textContent = pizza.description;
     let iSlice = document.createElement("i");
     iSlice.setAttribute("class", "fa-solid fa-pizza-slice");
-    spanSlice.textContent = ` Porzione: ${pizza.slice}`;
-    spanComplete.textContent = ` Intera: ${pizza.complete}`;
+    spanSlice.textContent = ` Porzione Eu. ${pizza.slice}`;
+    spanComplete.textContent = ` Intera Eu. ${pizza.complete}`;
     let divTitle = document.createElement('div')
     divTitle.appendChild(iSlice);
     divTitle.appendChild(h2);

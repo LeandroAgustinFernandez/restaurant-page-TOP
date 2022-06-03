@@ -38,7 +38,8 @@ section {
   flex: 1;
   border-radius: 3px;
 }
-.article-home {
+.article-home,
+.article-contact {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -58,11 +59,12 @@ section {
   text-shadow: 1px 1px rgb(51, 35, 29);
 }
 @media (max-width: 1024px) {
-  .article-home {
+  .article-home,
+  .article-contact {
     flex-direction: column;
     padding: 2em 3em;
   }
-  .divtext > p {
+  .divtext > p,.divinf {
     font-size: 1rem;
   }
 }
@@ -97,9 +99,9 @@ section {
 }
 .article-menu > div > div {
   display: flex;
-  gap:10px;
+  gap: 10px;
 }
-.fa-pizza-slice{
+.fa-pizza-slice {
   font-size: 1.5rem;
 }
 .article-menu p {
@@ -112,6 +114,44 @@ section {
     grid-template-columns: 1fr;
     gap: 1em;
   }
+}
+.div-contact{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+form > input,
+form > textarea,
+form > button {
+  border-radius: 4px;
+}
+form > label {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+form > input,
+form > textarea {
+  padding: 10px;
+}
+form > button {
+  padding: 1em;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor:pointer;
+}
+.divinf{
+  display: flex;
+  gap: 15px;
+  font-size: 1.5rem;
+}
+.divinf:nth-child(2){
+  margin: 2em 0;
 }
 footer {
   display: flex;
