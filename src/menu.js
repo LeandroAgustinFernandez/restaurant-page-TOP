@@ -25,7 +25,7 @@ let menuOptions = [
     description:
       "Pomodoro, prosciutto cotto ed un mare di mozzarella a coprire.",
     slice: 5.8,
-    complete:34,
+    complete: 34,
   },
   {
     name: "NAPOLI",
@@ -67,22 +67,27 @@ export default function menu() {
   let section = document.createElement("section");
   let article = document.createElement("article");
   article.classList.add("article-menu");
-  menuOptions.forEach(pizza => {
-    let div = document.createElement('div')
-    let h2 = document.createElement('h2')
-    let p = document.createElement('p')
-    let spanSlice = document.createElement('span')
-    let spanComplete = document.createElement('span')
+  menuOptions.forEach((pizza) => {
+    let div = document.createElement("div");
+    let h2 = document.createElement("h2");
+    let p = document.createElement("p");
+    let spanSlice = document.createElement("span");
+    let spanComplete = document.createElement("span");
     h2.textContent = pizza.name;
-    p.textContent = pizza.description
-    spanSlice.textContent = `Porzione: ${pizza.slice}`
-    spanComplete.textContent = `Intera: ${pizza.slice}`
-    div.appendChild(h2)
-    div.appendChild(p)
-    div.appendChild(spanSlice)
-    div.appendChild(spanComplete)
+    p.textContent = pizza.description;
+    let iSlice = document.createElement("i");
+    iSlice.setAttribute("class", "fa-solid fa-pizza-slice");
+    spanSlice.textContent = ` Porzione: ${pizza.slice}`;
+    spanComplete.textContent = ` Intera: ${pizza.complete}`;
+    let divTitle = document.createElement('div')
+    divTitle.appendChild(iSlice);
+    divTitle.appendChild(h2);
+    div.appendChild(divTitle);
+    div.appendChild(p);
+    div.appendChild(spanSlice);
+    div.appendChild(spanComplete);
     article.appendChild(div);
-});
+  });
   let h1 = document.createElement("h1");
   h1.classList.add("title");
   h1.textContent = "Il nostro menu";

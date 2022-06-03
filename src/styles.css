@@ -55,7 +55,7 @@ section {
 .divtext > p {
   font-size: 1.2rem;
   margin: 1em 0;
-  text-shadow: 1px 1px rgb(51, 35, 29);;
+  text-shadow: 1px 1px rgb(51, 35, 29);
 }
 @media (max-width: 1024px) {
   .article-home {
@@ -81,20 +81,37 @@ section {
   text-align: center;
   margin: 1em;
 }
-.article-menu{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    padding: 2em 6em;
-    gap:1em
+.article-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2em 6em;
+  gap: 1.5em;
 }
-.article-menu > div{
-    display: flex;
-    flex-direction: column;
+.article-menu > div {
+  background-color: rgb(248, 241, 241, 0.8);
+  color: rgb(51, 35, 29);
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  border-radius: 3px;
 }
-.article-menu p{
-    flex:1;
-    width: 60%;
-    margin: 1em 0;
+.article-menu > div > div {
+  display: flex;
+  gap:10px;
+}
+.fa-pizza-slice{
+  font-size: 1.5rem;
+}
+.article-menu p {
+  flex: 1;
+  width: 60%;
+  margin: 1em 0;
+}
+@media (max-width: 1024px) {
+  .article-menu {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
 }
 footer {
   display: flex;
